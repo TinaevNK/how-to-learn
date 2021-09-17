@@ -10,22 +10,434 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
+  background-color: #f2f2f2;
+  /*создаём блок шапки, позициониование сделал для того, чтобы дочерние элементы отталкивались от шапки*/
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 183px;
+  height: 32px;
+  /*выше определили стили и изображение для логотипа*/
+}
+
+.logo_place_header {
+  background-image: url(../images/logo_place_header.svg);
+  position: absolute;
+  top: 30px;
+  left: 64px;
+
+  /*данным модификатором мы задаём стиль блока в шапке (header)*/
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
+  height: 35px;
+  /*данным модификатором мы задаём стиль блока в подвале (footer)*/
+}
+
+.header__title {
+  margin: 0;
+  margin-left: 64px;
+  width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 2;
+  /*выше определили стили для элемента шапки(заголовок)*/
+}
+
+.header__subtitle {
+  margin: 0;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000000;
+  z-index: 2;
+  /*определяем стили для параграфа в шапке, сбросили внешние отступы, позиционировали*/
+}
+
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+  z-index: 2;
+  /*стили ссылки, цвет, убираем подчёркивание и ставим местонахождение по оси Z*/
+}
+
+.header__main-illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 1;
+  /*параметры элемента с картинкой*/
+  }
+
 .header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0;
   height: 568px;
   width: 568px;
+  background-color: #2f80ed;
+  /*ну и тут синий квадрат, спозиционировали, задали размеры и покрасили*/
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/*с шапкой закончили - присутпаем к следующему "крупному" блоку - content*/
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*По заданию требуется пользоваться флексом для выравнивания, воспользовался шансом)
+  за одно и расположил элементы по всей секции в колонку*/
+}
+
+.description {
+  margin-top: 100px;
+  width: 80%;
+  min-height: 100px;
+  /*отделил от шапки отступом по брифу и задал ширину с минимальной высотой(я не знаю на
+  сколько подробно стоит описывать, поэтому заранее простите:))*/
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  /*Создаём две колонки и "разносим" их друг от друга*/
+}
+
+.two-columns__brief {
+  margin: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+  /*параметририруем первую колонку*/
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+  /*параметрируем вторую колонку*/
+}
+
+.two-columns__paragraph {
+  margin: 0;
+  margin-bottom: 30px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000000;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+  color: #000000;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+/*приступаем к стилизации следующей секции digits*/
+.digits {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  /*отступили по брифу от предыдущей секции (description) и будущей (feynman)
+  задали ширину блока в 100% от ширины родителя */
+}
+
+.section-title {
+  margin: 0 auto;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  z-index: 2;
+  /*параметрируем заголовок, он нам ещё пригодится, как и другие блоки в этой секции*/
+}
+
+.section_title_theme_dark {
+  color: white;
+  /*модификатор в этой секции не понадобится, но правила гласили, что в CSS всё должно следовать
+  по порядку: блок-элемент-модификатор, надеюсь правильно понял)*/
+}
+
+.section-subtitle {
+  margin: 20px auto 0;
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  z-index: 2;
+  /*подзаголовок*/
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+}
+
+.table {
+  margin: auto;
+  padding: 0;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 2;
+  /*таблица, усердно используем преимущества флекса, распределяем элементы и переносим
+  на следующую строчку*/
+}
+
+/*да, всё верно, я не давал таблице модификатора, ввиду того, что она свёрстана как
+оболочка, распределяющая элементы. надеюсь моя логика верна */
+
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+  list-style: none;
+  z-index: 2;
+  /*ячейка в таблице*/
+}
+
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
-  margin-right: 0;
   margin-top: 80px;
 }
+
+.table__heading {
+  margin: 0 0 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 2;
+  /*чтобы хоть немного уменишить код - я объединяю отступы и их обнуление в одну строчку*/
+}
+
+.table__heading_theme_dark {
+  color: white;
+}
+
+.table__text {
+  margin: 0 0 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000000;
+  z-index: 2;
+  /*текст в ячейке*/
+}
+
+.table__text_theme_dark {
+  color: white;
+}
+
+.table__text:last-of-type {
+  margin-bottom: 0;
+  /*убираю отступ у последнего элемента*/
+}
+
+/*переходим к Фейнману*/
+.feynman {
+  position: relative;
+  width: 100%;
+  min-height: 637px;
+  max-height: 890px;
+  background-color: #f2f2f2;
+  height: 100vh;
+  /*параметры самой секции*/
+}
+
+.feynman__title {
+  position: relative;
+  margin: 100px auto 70px;
+  width: 648px;
+  text-align: center;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 2;
+  /*заголовок, параметрирую по брифу, позиционирую, чтобы была возможность использовать z-индекс*/
+}
+
+.feynman__subtitle {
+  position: relative;
+  margin: 0;
+  text-align: center;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #000000;
+  z-index: 2;
+  /*подзаголовок*/
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+  z-index: 2;
+  /*ссылка*/
+}
+
+.feynman__background-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 867px;
+  height: 637px;
+  z-index: 1;
+  /*фоновое изображение Фейнмана
+  кстати, в брифе просилось для изображений не забывать
+  использовать alt. Надеюсь я не переборщил с этим в работе*/
+}
+
+/*следующая секция - kaufman. да, она совсем короткая тут, т.к. воспользовался
+существующими элементами и блоками*/
+.kaufman {
+  position: relative;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  /*сама оболочка секции. на сей раз отступы задал с помощью паддингов*/
+}
+
+.kaufman__triangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  top: 0;
+  right: -210px;
+  z-index: 1;
+  /*тот самый треугольник, сместил, положил на фон, alt прописал*/
+}
+
+/*подвал сайта, последняя секция в этом задании*/
+.footer {
+  min-height: 350px;
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 60px 0 40px;
+  box-sizing: border-box;
+  /*задаю параметры секции, оболочки*/
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 250px;
+  margin: 0 auto;
+  padding: 0;
+  /*задаю саму таблицу. высоту таблице задал логическим путём(взял минимальную высоту секции 350px
+  и вычел внутренние отступы 60px и 40px) таким способом я расстянул таблицу на всю высоту секции
+  хотел задать 100% высоты родителя, но нужно чтобыу него была задана фиксированная высота.. мы такой
+  не имеем, поэтому решил сделать так:)*/
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  /*параметры столбца*/
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  justify-content: space-between;
+  /*модификатор для первого столбца*/
+}
+
+.footer__author {
+  margin: 18px 0;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  /*автор*/
+}
+
+.footer__column_content_info {
+  color: white;
+  list-style: none;
+  /*задаём общий стиль под следующий столбец*/
+}
+
+.footer__column-heading {
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  /*заголовки 2 и 3 столбца*/
+}
+
+.footer__column-links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  /*общие параметры ссылок*/
+}
+
+.footer__column-link:last-of-type {
+  margin-bottom: 16px;
+}
+
+.footer__column-link:first-of-type {
+  margin-top: 20px;
+}
+/*у нас всё таки два элемента links и link
+решил этим воспользоваться ивозложил на link обязанности
+расставить нужные отступы в последнем элементе*/
+
+.footer__column_content_social {
+  list-style: none;
+  color: white;
+  /*3й столбец списка*/
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  /*иконки*/
+}
+
+/*немного от себя
+бриф можно реализовать по-разному, надеюсь мой способ не самый примитивный, старался
+сделать лучше, лишний раз не пользоваться читерским flex и универсальной обёрткой div
+отсюда и изощрения в виде списков (как было в тренажёре). Так сложнее на мой взгляд
+но зато сам код не пестрит div,ами
+надеюсь логика, прописанная мной в комментариях, понятна)*/
