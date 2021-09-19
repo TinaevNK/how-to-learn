@@ -109,8 +109,7 @@
 .description {
   margin-top: 100px;
   width: 80%;
-  min-height: 100px;
-  /*отделил от шапки отступом по брифу и задал ширину с минимальной высотой(я не знаю на
+  /*отделил от шапки отступом по брифу и задал ширину (я не знаю на
   сколько подробно стоит описывать, поэтому заранее простите:))*/
 }
 
@@ -171,11 +170,12 @@
   font-weight: bold;
   text-align: center;
   color: #000000;
+  position: relative;
   z-index: 2;
   /*параметрируем заголовок, он нам ещё пригодится, как и другие блоки в этой секции*/
 }
 
-.section_title_theme_dark {
+.section-title_theme_dark {
   color: white;
   /*модификатор в этой секции не понадобится, но правила гласили, что в CSS всё должно следовать
   по порядку: блок-элемент-модификатор, надеюсь правильно понял)*/
@@ -262,10 +262,13 @@
 .feynman {
   position: relative;
   width: 100%;
-  min-height: 637px;
-  max-height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
-  height: 100vh;
+  background-image: url(../images/feynman.png);
+  background-position: left bottom;
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+
   /*параметры самой секции*/
 }
 
@@ -307,18 +310,6 @@
   /*ссылка*/
 }
 
-.feynman__background-img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 867px;
-  height: 637px;
-  z-index: 1;
-  /*фоновое изображение Фейнмана
-  кстати, в брифе просилось для изображений не забывать
-  использовать alt. Надеюсь я не переборщил с этим в работе*/
-}
-
 /*следующая секция - kaufman. да, она совсем короткая тут, т.к. воспользовался
 существующими элементами и блоками*/
 .kaufman {
@@ -332,19 +323,20 @@
 }
 
 .kaufman__triangle {
-  position: absolute;
+  background-image: url(../images/kaufman-triangle.svg);
   width: 877px;
   height: 877px;
+  background-size: contain;
+  position: absolute;
   top: 0;
   right: -210px;
-  z-index: 1;
   /*тот самый треугольник, сместил, положил на фон, alt прописал*/
 }
 
 /*подвал сайта, последняя секция в этом задании*/
 .footer {
+  display: flex;
   min-height: 350px;
-  width: 100%;
   background-color: #1f1f1f;
   padding: 60px 0 40px;
   box-sizing: border-box;
@@ -355,31 +347,25 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
-  min-height: 250px;
   margin: 0 auto;
-  padding: 0;
-  /*задаю саму таблицу. высоту таблице задал логическим путём(взял минимальную высоту секции 350px
-  и вычел внутренние отступы 60px и 40px) таким способом я расстянул таблицу на всю высоту секции
-  хотел задать 100% высоты родителя, но нужно чтобыу него была задана фиксированная высота.. мы такой
-  не имеем, поэтому решил сделать так:)*/
+  /*задаю саму таблицу*/
 }
 
 .footer__column {
   display: flex;
   flex-direction: column;
-  list-style: none;
   /*параметры столбца*/
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
   justify-content: space-between;
+  color: white;
   /*модификатор для первого столбца*/
 }
 
 .footer__author {
   margin: 18px 0;
-  color: white;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -388,7 +374,6 @@
 
 .footer__column_content_info {
   color: white;
-  list-style: none;
   /*задаём общий стиль под следующий столбец*/
 }
 
@@ -401,25 +386,22 @@
 }
 
 .footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 16px;
+  padding: 0;
+  /*общие параметры ссылок, их контейнер*/
+}
+
+.footer__column-link {
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   list-style: none;
-  color: white;
   text-decoration: none;
-  /*общие параметры ссылок*/
+  color: white;
+  /*параметры самих ссылок*/
 }
-
-.footer__column-link:last-of-type {
-  margin-bottom: 16px;
-}
-
-.footer__column-link:first-of-type {
-  margin-top: 20px;
-}
-/*у нас всё таки два элемента links и link
-решил этим воспользоваться ивозложил на link обязанности
-расставить нужные отступы в последнем элементе*/
 
 .footer__column_content_social {
   list-style: none;
@@ -433,10 +415,3 @@
   margin-right: 10px;
   /*иконки*/
 }
-
-/*немного от себя
-бриф можно реализовать по-разному, надеюсь мой способ не самый примитивный, старался
-сделать лучше, лишний раз не пользоваться читерским flex и универсальной обёрткой div
-отсюда и изощрения в виде списков (как было в тренажёре). Так сложнее на мой взгляд
-но зато сам код не пестрит div,ами
-надеюсь логика, прописанная мной в комментариях, понятна)*/
