@@ -397,11 +397,15 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  list-style: none;
   text-decoration: none;
   color: white;
   /*параметры самих ссылок*/
 }
+
+.footer__column-list {
+  list-style: none;
+}
+/*элемент списка, убираем всем li маркер, тем самысм разграничив стили ссылок и списка*/
 
 .footer__column_content_social {
   list-style: none;
