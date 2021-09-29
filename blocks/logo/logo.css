@@ -1,0 +1,8 @@
+.logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 183px;
+  height: 32px;
+  /*выше определили стили и изображение для логотипа*/
+}

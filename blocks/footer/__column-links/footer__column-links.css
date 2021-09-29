@@ -1,0 +1,7 @@
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 16px;
+  padding: 0;
+  /*общие параметры ссылок, их контейнер*/
+}

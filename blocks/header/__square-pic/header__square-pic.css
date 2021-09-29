@@ -1,0 +1,9 @@
+.header__square-pic {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  /*ну и тут синий квадрат, спозиционировали, задали размеры и покрасили*/
+}

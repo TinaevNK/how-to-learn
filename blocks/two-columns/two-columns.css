@@ -1,0 +1,8 @@
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  /*Создаём две колонки и "разносим" их друг от друга*/
+}
+

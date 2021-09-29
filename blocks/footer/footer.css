@@ -1,0 +1,9 @@
+/*подвал сайта, последняя секция в этом задании*/
+.footer {
+  display: flex;
+  min-height: 350px;
+  background-color: #1f1f1f;
+  padding: 60px 0 40px;
+  box-sizing: border-box;
+  /*задаю параметры секции, оболочки*/
+}

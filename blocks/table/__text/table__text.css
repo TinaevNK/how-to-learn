@@ -1,0 +1,14 @@
+.table__text {
+  margin: 0 0 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000000;
+  z-index: 2;
+  /*текст в ячейке*/
+}
+
+.table__text:last-of-type {
+  margin-bottom: 0;
+  /*убираю отступ у последнего элемента*/
+}

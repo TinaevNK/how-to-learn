@@ -1,0 +1,6 @@
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  justify-content: space-between;
+  color: white;
+  /*модификатор для первого столбца*/
+}

@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /*чтобы за границы блока ничего не вышло*/
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  background-color: #f2f2f2;
+
+  /*создаём блок шапки, позициониование сделал для того, чтобы дочерние элементы отталкивались от шапки*/
+}

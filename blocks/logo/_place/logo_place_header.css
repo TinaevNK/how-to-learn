@@ -1,0 +1,7 @@
+.logo_place_header {
+  background-image: url(../../../images/logo_place_header.svg);
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  /*данным модификатором мы задаём стиль блока в шапке (header)*/
+}

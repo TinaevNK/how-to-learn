@@ -1,0 +1,5 @@
+.logo_place_footer {
+  background-image: url(../../../images/logo_place_footer.svg);
+  height: 35px;
+  /*данным модификатором мы задаём стиль блока в подвале (footer)*/
+}

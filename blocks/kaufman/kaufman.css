@@ -1,0 +1,11 @@
+/*следующая секция - kaufman. да, она совсем короткая тут, т.к. воспользовался
+существующими элементами и блоками*/
+.kaufman {
+  position: relative;
+  overflow: hidden;
+  background-color: #1f1f1f;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  /*сама оболочка секции. на сей раз отступы задал с помощью паддингов*/
+}

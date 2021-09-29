@@ -1,0 +1,12 @@
+.section-title {
+  margin: 0 auto;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  z-index: 2;
+  /*параметрируем заголовок, он нам ещё пригодится, как и другие блоки в этой секции*/
+}

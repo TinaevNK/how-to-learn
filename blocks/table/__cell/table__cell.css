@@ -1,0 +1,7 @@
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+  list-style: none;
+  z-index: 2;
+  /*ячейка в таблице*/
+}

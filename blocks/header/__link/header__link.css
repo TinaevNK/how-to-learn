@@ -1,0 +1,12 @@
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity .3s ease;
+  /*стили ссылки, цвет, убираем подчёркивание и ставим местонахождение по оси Z*/
+}
+
+.header__link:hover {
+  opacity: 0.7;
+}

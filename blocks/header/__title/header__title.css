@@ -1,0 +1,11 @@
+.header__title {
+  margin: 0;
+  margin-left: 64px;
+  width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 2;
+  /*выше определили стили для элемента шапки(заголовок)*/
+}

@@ -1,0 +1,7 @@
+.footer__column-heading {
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  /*заголовки 2 и 3 столбца*/
+}

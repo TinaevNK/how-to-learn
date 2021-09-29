@@ -1,0 +1,9 @@
+.two-columns__brief {
+  margin: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+  /*параметририруем первую колонку*/
+}
