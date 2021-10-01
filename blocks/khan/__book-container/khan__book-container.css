@@ -1,3 +1,4 @@
 .khan__book-container {
-display: flex;
+  display: flex;
+  align-items: flex-start;
 }

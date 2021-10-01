@@ -16,7 +16,7 @@
         <p class="header__subtitle">
           Какие современные и эффективные подходы к обучению вы можете
           использовать в своей жизни?
-          <a href="#" class="header__link">Узнать →</a>
+          <a href="#" class="header__link">Узнать &#10230;</a>
         </p>
         <img
           src="images/header-image.png"
@@ -59,7 +59,7 @@
           <ul class="cards">
             <li class="cards__item">
               <img
-                src="./images/cards-attention.png"
+                src="./images/cards-attention.jpg"
                 alt="Картинка 1"
                 class="cards__image"
               />
@@ -71,7 +71,7 @@
             </li>
             <li class="cards__item">
               <img
-                src="./images/cards-recall.png"
+                src="./images/cards-recall.jpg"
                 alt="Картинка 2"
                 class="cards__image"
               />
@@ -83,7 +83,7 @@
             </li>
             <li class="cards__item">
               <img
-                src="./images/cards-interliving.png"
+                src="./images/cards-interliving.jpg"
                 alt="Картинка 3"
                 class="cards__image"
               />
@@ -95,7 +95,7 @@
             </li>
             <li class="cards__item">
               <img
-                src="./images/cards-question.png"
+                src="./images/cards-question.jpg"
                 alt="Картинка 4"
                 class="cards__image"
               />
@@ -107,7 +107,7 @@
             </li>
             <li class="cards__item">
               <img
-                src="./images/cards-competence.png"
+                src="./images/cards-competence.jpg"
                 alt="Картинка 5"
                 class="cards__image"
               />
@@ -158,7 +158,7 @@
         <section class="feynman">
           <h2 class="feynman__title">Метод Фейнмана</h2>
           <p class="feynman__subtitle">Выучить и не забыть.</p>
-          <a href="#" class="feynman__link">Подробнее →</a>
+          <a href="#" class="feynman__link">Подробнее &#10230;</a>
         </section>
         <!--блок digits, задачу выполнил с помощью списков-->
         <section class="digits">
@@ -213,13 +213,13 @@
           <div class="khan__container">
             <p class="khan__author">Салман Хан</p>
             <h2 class="khan__title">Весь мир — школа</h2>
-            <p class="khan__quote">
+            <blockquote class="khan__quote">
               Страсть и новаторство Сала Хана меняют процесс обучения миллионов
               студентов по всему миру. Книгу «Весь мир — школа» нужно прочитать
               всем, кто занимается образованием — так учащиеся повсюду смогут
               получить навыки и знания, которые приносят успех в школе, карьере
               и жизни.
-            </p>
+            </blockquote>
             <p class="khan__quote-author">Джордж Лукас</p>
             <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
             <div class="khan__book-container">
@@ -229,7 +229,7 @@
                 class="khan__book-pic"
               />
               <a href="#" target="_blank" class="khan__buy-link"
-                >Купить книгу →</a
+                >Купить книгу &#10230;</a
               >
             </div>
           </div>
@@ -312,28 +312,40 @@
           <p class="section-subtitle">
             Больше материалов о техниках и лайфхаках обучения
           </p>
-          <div class="resources__logo-zone">
-            <img
-              src="./images/resources-arzamas.svg"
-              alt="Логотип Арзамас"
-              class="resources__logo"
-            />
-            <img
-              src="./images/resources-n1.svg"
-              alt="Логотип Н+1"
-              class="resources__logo"
-            />
-            <img
-              src="./images/resources-strelka.svg"
-              alt="Логотип Стрелка"
-              class="resources__logo"
-            />
-            <img
-              src="./images/resources-polka.svg"
-              alt="Логотип Полка"
-              class="resources__logo"
-            />
-          </div>
+          <ul class="resources__logo-zone">
+            <li>
+              <a href="#" target="_blank" class="resources__logo-link"
+                ><img
+                  src="./images/resources-arzamas.svg"
+                  alt="Логотип Арзамас"
+                  class="resources__logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="resources__logo-link"
+                ><img
+                  src="./images/resources-n1.svg"
+                  alt="Логотип Н+1"
+                  class="resources__logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="resources__logo-link"
+                ><img
+                  src="./images/resources-strelka.svg"
+                  alt="Логотип Стрелка"
+                  class="resources__logo"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="resources__logo-link"
+                ><img
+                  src="./images/resources-polka.svg"
+                  alt="Логотип Полка"
+                  class="resources__logo"
+              /></a>
+            </li>
+          </ul>
         </section>
       </main>
       <!--подвал сайта, можно было проще, но решил списками, почти без участия div и минимум flex-->
@@ -402,3 +414,5 @@
     </div>
   </body>
 </html>
+<!--Ольга, спасибо большое за комментарии и указанные ошибки! после таких ревью
+скилл точно прокачиваеся, спасибо за Ваш труд!-->

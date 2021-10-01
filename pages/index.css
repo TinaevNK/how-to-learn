@@ -77,6 +77,7 @@
 /*блок/секция resources и его элементы*/
 @import url(../blocks/resources/resources.css);
 @import url(../blocks/resources/__logo-zone/resources__logo-zone.css);
+@import url(../blocks/resources/__logo-link/resources__logo-link.css);
 @import url(../blocks/resources/__logo/resources__logo.css);
 /*блок/секция footer и его элементы с модификаторами*/
 @import url(../blocks/footer/footer.css);
